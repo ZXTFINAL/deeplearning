@@ -32,7 +32,7 @@ def loss_funtion(X, y):
         xi = X[i]
         yi = y[i]
         yi_hat = model(xi)
-        total_loss += (yi_hat-yi)**2
+        total_loss += abs(yi_hat-yi)**2
     avg_loss = (1/n_samples)*total_loss
     return avg_loss
 
